@@ -15,7 +15,7 @@
                         'color-primary': '#E76F51',
                     },
                     backgroundImage: {
-                        'hero-bg': "url('images/others/hero-bg.png')",
+                        'hero-bg': "linear-gradient(to right bottom, rgba(24,24,24, 0.8), rgba(24,24,24, 0.8)), url('images/others/hero-bg.png')",
                     }
                 }
             }
@@ -24,53 +24,49 @@
 </head>
 
 <body>
-    <header class="bg-hero-bg bg-no-repeat bg-cover bg-center h-screen relative">
-        <div
-            class="h-screen bg-gradient-to-r from-[#000000] via-[rgb(24,24,24, 0.8)] to-[#181818] opacity-60 w-full absolute">
+    <header class="bg-hero-bg bg-no-repeat bg-cover bg-center h-screen px-6 pb-16">
+
+        <nav class="z-20 p-0 m-0">
+            <div class="navbar bg-transparent text-white flex justify-between p-0">
+                <div class="navbar-start p-0">
+                    <a class="btn btn-ghost normal-case text-xl p-0">Go Ride</a>
+                </div>
+                <div class="navbar-end hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 text-white font-bold text-center gap-5">
+                        <li><a class="hover:text-white hover:scale-[1.1]">Home</a></li>
+                        <li><a class="hover:text-white hover:scale-[1.1]">Shop</a></li>
+                        <li><a class="hover:text-white hover:scale-[1.1]">News</a></li>
+                        <li><a class="hover:text-white hover:scale-[1.1]">Contact</a></li>
+                        <li> <a class="bg-color-primary text-white hover:text-white">Login</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown relative">
+                    <label tabindex="0" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </label>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-[#00000080] rounded-box w-52 absolute right-5 ">
+                        <li><a class="hover:text-white hover:scale-[1.1]">Home</a></li>
+                        <li><a class="hover:text-white hover:scale-[1.1]">Shop</a></li>
+                        <li><a class="hover:text-white hover:scale-[1.1]">News</a></li>
+                        <li><a class="hover:text-white hover:scale-[1.1]">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="banner text-white text-center space-y-5 mt-10">
+            <h1 class="text-5xl font-bold">Keep Your Ride Safe At Every Time</h1>
+            <p class="text-xl font-normal">Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt
+                nostrud amet.</p>
+            <button
+                class="bg-color-primary text-white hover:text-white px-5 py-2 rounded-xl hover:scale-[1.1] click">Purchase</button>
         </div>
 
-        <div class="header-container absolute px-6 pb-10 pt-2">
-            <nav class="z-20 p-0 m-0">
-                <div class="navbar bg-transparent text-white flex justify-between p-0">
-                    <div class="navbar-start p-0">
-                        <a class="btn btn-ghost normal-case text-xl p-0">Go Ride</a>
-                    </div>
-                    <div class="navbar-end hidden lg:flex">
-                        <ul class="menu menu-horizontal px-1 text-white font-bold text-center gap-5">
-                            <li><a class="hover:text-white hover:scale-[1.1]">Home</a></li>
-                            <li><a class="hover:text-white hover:scale-[1.1]">Shop</a></li>
-                            <li><a class="hover:text-white hover:scale-[1.1]">News</a></li>
-                            <li><a class="hover:text-white hover:scale-[1.1]">Contact</a></li>
-                            <li> <a class="bg-color-primary text-white hover:text-white">Login</a></li>
-                        </ul>
-                    </div>
-                    <div class="dropdown relative">
-                        <label tabindex="0" class="btn btn-ghost lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M4 6h16M4 12h8m-8 6h16" />
-                            </svg>
-                        </label>
-                        <ul tabindex="0"
-                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-[#00000080] rounded-box w-52 absolute right-5 ">
-                            <li><a class="hover:text-white hover:scale-[1.1]">Home</a></li>
-                            <li><a class="hover:text-white hover:scale-[1.1]">Shop</a></li>
-                            <li><a class="hover:text-white hover:scale-[1.1]">News</a></li>
-                            <li><a class="hover:text-white hover:scale-[1.1]">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <div class="banner text-white text-center space-y-5 mt-10">
-                <h1 class="text-5xl font-bold">Keep Your Ride Safe At Every Time</h1>
-                <p class="text-xl font-normal">Amet minim mollit non deserunt ullamco est sit aliqua dolor
-                    do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt
-                    nostrud amet.</p>
-                <button
-                    class="bg-color-primary text-white hover:text-white px-5 py-2 rounded-xl hover:scale-[1.1] click">Purchase</button>
-            </div>
-        </div>
     </header>
 
     <main>
@@ -79,7 +75,7 @@
                 <div class="section-title  text-center">
                     <h1 class="text-black text-2xl font-semibold">Fetured Bikes In This Year</h1>
                     <small class="text-[#E76F51] text-xl">Best bike collection</small>
-                    <hr class="w-20 bg-[#E76F51] h-[2px] m-auto">
+                    <hr class="w-20 bg-[#E76F51] h-[2px] m-auto border-0">
                 </div>
                 <div class="grid-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10 gap-10">
                     <div class="card bg-slate-300 justify-center flex items-center p-10 shadow-xl">
@@ -99,11 +95,11 @@
             <div class="section-title  text-center">
                 <h1 class="text-black text-2xl font-semibold">Latest News</h1>
                 <small class="text-[#E76F51] text-xl">Explore latest News</small>
-                <hr class="w-20 bg-[#E76F51] h-[2px] m-auto">
+                <hr class="w-20 bg-[#E76F51] text-[#E76F51] h-[2px] m-auto border-0">
             </div>
-            <div class="news-card-container grid gird-cols-1 gap-9 md:grid-cols-2 lg:grid-cols-3">
+            <div class="news-card-container grid gird-cols-1 gap-9 md:grid-cols-2 lg:grid-cols-3 mt-10">
 
-                <div class="card w-full bg-base-100 shadow-xl h-auto">
+                <div class="card w-full bg-base-100 shadow-xl">
                     <img src="images/others/latest1.png" alt="Shoes" />
                     <div class="card-body w-full px-0">
                         <h2 class="card-title">Ducati XDIAVEL S-73</h2>
@@ -116,7 +112,7 @@
                     </div>
                 </div>
 
-                <div class="card w-full bg-base-100 shadow-xl mt-10 h-auto">
+                <div class="card w-full bg-base-100 shadow-xl h-auto">
                     <img src="images/others/latest2.png" alt="Shoes" />
                     <div class="card-body w-full px-0">
                         <h2 class="card-title">Ducati XDIAVEL S-73</h2>
@@ -130,7 +126,7 @@
                 </div>
 
 
-                <div class="card w-full bg-base-100 shadow-xl mt-10 h-auto">
+                <div class="card w-full bg-base-100 shadow-xl h-auto">
                     <img src="images/others/latest3.png" alt="Shoes" />
                     <div class="card-body w-full px-0">
                         <h2 class="card-title">Ducati XDIAVEL S-73</h2>
@@ -145,6 +141,76 @@
             </div>
 
 
+        </section>
+
+
+        <section class="px-6 py-16">
+            <div class="section-title  text-center">
+                <h1 class="text-black text-2xl font-semibold">Happy
+                    Clients</h1>
+                <small class="text-[#E76F51] text-xl">What's they say's</small>
+                <hr class="w-20 bg-[#E76F51] text-[#E76F51] h-[2px] m-auto border-0">
+            </div>
+
+            <div class="review-container mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="review-card space-y-3 text-center p-9 shadow-2xl">
+                    <div class="w-1/2 m-auto">
+                        <img src="images/others/user-2.png" alt="">
+                    </div>
+
+                    <p>Slate helps you see how
+                        many more days you need
+                        to work to reach your financial
+                        goal for the month and year.</p>
+                    <div class="rating rating-md">
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" checked />
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                    </div>
+                    <h4 class="text-blue-800">Regina Miles</h4>
+                    <h4>Banker</h4>
+                </div>
+                <div class="review-card space-y-3 text-center p-9 shadow-2xl">
+                    <div class="w-1/2 m-auto">
+                        <img src="images/others/user-3.png" alt="">
+                    </div>
+
+                    <p>Slate helps you see how
+                        many more days you need
+                        to work to reach your financial
+                        goal for the month and year.</p>
+                    <div class="rating rating-md">
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" checked />
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                    </div>
+                    <h4 class="text-blue-800">Regina Miles</h4>
+                    <h4>Banker</h4>
+                </div>
+                <div class="review-card space-y-3 text-center p-9 shadow-2xl">
+                    <div class="w-1/2 m-auto">
+                        <img src="images/others/user-1.png" alt="">
+                    </div>
+
+                    <p>Slate helps you see how
+                        many more days you need
+                        to work to reach your financial
+                        goal for the month and year.</p>
+                    <div class="rating rating-md">
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" checked />
+                        <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                    </div>
+                    <h4 class="text-blue-800">Regina Miles</h4>
+                    <h4>Banker</h4>
+                </div>
+            </div>
         </section>
     </main>
 </body>
